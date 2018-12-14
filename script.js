@@ -123,3 +123,12 @@ formDonations.addEventListener("submit", e => {
     ammount: formDonations.ammount.value
   });
 });
+//TODO
+
+const todo = document.querySelector("#addTodo input[type='text']");
+const addTodo = document.querySelector("#add-todo input[type='submit']");
+
+const todoList = document.querySelector("#todo-list ul");
+const todoListMsg = document.querySelector("#todo-list p");
+
+//
