@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>EDUX</title>
+  </head>
+  <body>
+    <div class="navContainer">
+      <a href="index.html"><img class="logo" src="images/edux_logo.png"/></a>
+      <ul class="nav">
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">Sign up / Log in</a>
+          <div class="dropdown-content">
+            <a href="index_user.html">Sign up</a>
+            <a href="index_log_in.html">Log in</a>
+            <button id="logout">Logout</button>
+          </div>
+        </li>
+        <li><a href="index.html">Contact</a></li>
+        <li><a href="index.html">About Us</a></li>
+        <li><a href="index.html">About Donations</a></li>
+      </ul>
+    </div>
+    <div class="landingFormsDonate" id="home">
+      <div></div>
+      <div id="don">
+        <div>
+        <h2>Donate</h2>
+        <div>
+          <form id="edux-donation">
+            <div><input value="money" type="radio" name="type" checked />Money<br /></div>
+            <div><input value="books" type="radio" name="type" />Books<br /></div>
+            <div><input value="computers" type="radio" name="type" />Computers<br /></div>
+            <div><input type="number" name="ammount" placeholder="ammount" /></div>
+            <div>
+              <input
+              id="button"
+              type="submit"
+              class="submit"
+              value="DONATE"
+              onclick="showMore()"
+            />
+            <div id="d3">
+              <a href="thank_you.html"
+                ><input type="button" value="Next" onclick="showLess()"
+              /></a>
+            </div></div>
+          </form>
+        </div>
+      </div>
+      <div>
+          <h2>Donations</h2>
+          <form><ul id="donations-list"></ul></form>
+        </div>
+        
+    </div>
+    <div></div>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
+    <script src="donate.js" type="text/javascript"></script>
+    <script src="logout.js" type="text/javascript"></script>
+    <script src="button.js" type="text/javascript"></script>
+  </body>
+</html>

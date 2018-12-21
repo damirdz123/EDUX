@@ -1,3 +1,8 @@
+//==============================================================
+//==============================================================
+// Code needed to initialize firebase
+//==============================================================
+//==============================================================
 // Initialize Firebase
 const config = {
   apiKey: "AIzaSyAfObHt5pCM4RRtoLHVD_y0tgY4bL4pMgA",
@@ -16,6 +21,8 @@ const db = firebase.firestore();
 db.settings({
   timestampsInSnapshots: true
 });
+
+//==============================================================
 
 // donations
 const donationsList = document.querySelector("#donations-list");
@@ -44,3 +51,14 @@ db.collection("donations")
       renderDonations(doc);
     });
   });
+
+const formDonations = document.querySelector("#edux-donation");
+
+formDonations.addEventListener("submit", e => {
+  e.preventDefault();
+  db.collection("donations").add({
+    uid: localStorage.getItem("uid"),
+    type: formDonations.type.value,
+    ammount: formDonations.ammount.value
+  });
+});

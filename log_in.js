@@ -17,6 +17,32 @@ db.settings({
   timestampsInSnapshots: true
 });
 
+const loginEmail = document.querySelector("#login input[type='email']");
+const loginPassword = document.querySelector("#login input[type='password']");
+const loginButton = document.querySelector("#login .submit");
+const loginMsg = document.querySelector("#login p");
+
+//Login user
+loginButton.addEventListener("click", loginUser);
+
+function loginUser(e) {
+  e.preventDefault();
+  firebase
+    .auth()
+    .signInWithEmailAndPassword(loginEmail.value, loginPassword.value)
+    .then(user => {
+      console.log(user.user.uid);
+      localStorage.setItem("uid", user.user.uid); //jonas
+      console.log("Succesfull login");
+      loginMsg.textContent = "Login Successfull";
+      //fetchTodos();
+    })
+    .catch(function(error) {
+      console.log(error);
+      loginMsg.textContent = "Login error: " + error.message;
+    });
+}
+
 // donations
 const donationsList = document.querySelector("#donations-list");
 
@@ -44,3 +70,11 @@ db.collection("donations")
       renderDonations(doc);
     });
   });
+
+// Donations list
+
+const todo = document.querySelector("#addTodo input[type='text']");
+const addTodo = document.querySelector("#add-todo input[type='submit']");
+
+const todoList = document.querySelector("#todo-list ul");
+const todoListMsg = document.querySelector("#todo-list p");

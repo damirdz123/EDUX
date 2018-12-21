@@ -1,30 +1,479 @@
+html,
 body {
-  padding: 0;
   margin: 0;
-  font-family: sans-serif;
-  background: #f9f9f9;
+  font-family: "Oswald", sans-serif;
+  scroll-behavior: smooth;
 }
 
-main {
-  margin: 2vh 2vw;
-  min-height: 80vh;
-  width: 96vw;
+/* landing page*/
+
+.landing {
+  height: 100vh;
+  width: 100vw;
+  background-image: url(images/pic2.jpg.png);
+  background-size: cover;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr;
 }
 
-div {
-  grid-column: span 1;
-  grid-row: span 1;
-  background: white;
-  padding: 10px;
-  border: 1px grey solid;
-  border-radius: 5px;
+.navContainer {
+  height: 10vh;
+  width: 100vw;
+  background-color: #232323;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  position: fixed;
 }
 
-button {
+.logo {
+  height: 8vh;
+  padding: 1vh;
+  padding-left: 30px;
+}
+
+.nav {
+  width: auto;
+  margin: 0;
+  list-style: none;
+  padding-right: 30px;
+}
+
+.nav li {
+  float: right;
+}
+.nav a {
+  height: 100%;
   display: block;
-  margin: 0 auto;
+  text-decoration: none;
+  padding: 14px;
+  font-size: 30px;
+  color: #fff;
+  font-weight: 200;
+}
+
+.nav a:hover {
+  color: #555555;
+}
+
+.signIn {
+  background-color: #d63d41;
+}
+
+li a:hover,
+.dropdown:hover .dropbtn {
+  background-color: #d63d41;
+}
+
+li.dropdown {
+  display: inline-block;
+  background-color: #d63d41;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+.dropdown-content a:hover {
+  background-color: #d63d41;
+  color: #fff;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.landingHeading {
+  padding: 10%;
+}
+
+.landingHeadingOne {
+  background-color: #d63d41;
+  text-align: center;
+  font-size: 3vw;
+  color: #fff;
+  font-weight: 400;
+  padding: 30px;
+}
+
+.landingConatiner {
+  margin-top: 35vh;
+}
+
+.donate {
+  float: right;
+  width: 200px;
+  height: 60px;
+  font-size: 30px;
+  background-color: #883032;
+  color: #fff;
+  border: 0;
+  font-family: "oswald", sans-serif;
+}
+
+/* about donations page*/
+
+.aboutDonations {
+  width: 100vw;
+  height: 100vh;
+  background-color: #232323;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.donLeft {
+  height: 100vh;
+  width: 50vw;
+}
+
+.donLeft .donate {
+  margin-right: 70px;
+  margin-top: 20px;
+}
+
+.donRight {
+  height: 100vh;
+  width: 50vw;
+  background-image: url(images/a.png);
+  background-size: cover;
+}
+
+.headingDon {
+  background-color: #d63d41;
+  color: #fff;
+  width: 20vw;
+  text-align: center;
+  padding: auto;
+  margin-left: 100px;
+  margin-top: 50px;
+  font-size: 2vw;
+  padding: 5px;
+}
+
+.aboutus {
+  width: 35vw;
+  font-weight: 300;
+  margin: auto;
+  display: block;
+  margin-top: 30px;
+  font-size: 1.2vw;
+  color: #fff;
+}
+
+.icons {
+  width: 35vw;
+  margin: auto;
+  display: block;
+  margin-top: 10px;
+}
+
+/* about us page*/
+
+.aboutUs {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.usLeft {
+  background-color: #fff;
+}
+
+.usRight {
+  background-color: #d63d41;
+  background-image: url(images/A_general_map_of_Eastern_Europe.png);
+  background-size: cover;
+}
+
+.headingUs {
+  background-color: #d63d41;
+  color: #fff;
+  width: 15vw;
+  text-align: center;
+  padding: auto;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  font-size: 2vw;
+  padding: 5px;
+}
+
+.statistic {
+  font-size: 30px;
+  font-weight: 900;
+  display: block;
+  margin: auto;
+  width: 300px;
+  margin-top: 30px;
+}
+
+.zarez {
+  display: block;
+  margin: auto;
+  width: 250px;
+}
+
+.irina {
+  padding-top: 20px;
+  display: block;
+  margin: auto;
+  width: 200px;
+}
+
+.irinaName {
+  display: block;
+  margin: auto;
+  width: 200px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500px;
+}
+
+.usText {
+  width: 50vw;
+  display: block;
+  margin: auto;
+  color: #fff;
+  font-size: 1.2vw;
+  font-weight: 300;
+  margin-top: 18vh;
+}
+
+/*contact*/
+.cont {
+  display: block;
+  margin: auto;
+  height: 100vh;
+  width: 100vw;
+  background-color: #232323;
+}
+
+.contactContainer {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  width: 90vw;
+  margin: auto;
+  padding-top: 150px;
+}
+
+.contactText {
+  display: block;
+  color: #fff;
+  float: right;
+  font-size: 1.5vw;
+  display: block;
+  padding-right: 3vw;
+}
+
+.mapouter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+}
+
+.socialIcons {
+  display: block;
+  margin: auto;
+}
+.icon {
+  display: block;
+  width: 4vw;
+  padding: 15px;
+}
+
+/* FORMS */
+
+.landingForms {
+  height: 100vh;
+  width: 100vw;
+  background-image: url(images/pic2.jpg.png);
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.landingFormsDonate {
+  height: 100vh;
+  width: 100vw;
+  background-image: url(images/pic2.jpg.png);
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+}
+
+/* SIGN UP */
+
+#signup {
+  margin: auto;
+  background-color: #fff;
+  width: 70%;
+}
+
+#signup h2 {
+  background-color: #d63d41;
+  margin: 0;
+  padding: 15px;
+  color: #fff;
+}
+
+#signup p {
+  text-align: center;
+  margin: 0;
+  padding-bottom: 15px;
+}
+
+form {
+  margin: 20px;
+}
+
+input {
+  background-color: #c4c4c4;
+  border: none;
+  width: 100%;
+  height: 5vh;
+  margin-bottom: 5px;
+}
+
+.submit {
+  background-color: #883032;
+  color: #fff;
+  height: 5vh;
+  border: 0;
+}
+
+/* LOG IN */
+
+#login {
+  margin: auto;
+  background-color: #fff;
+  width: 70%;
+}
+
+#login h2 {
+  background-color: #d63d41;
+  margin: 0;
+  padding: 15px;
+  color: #fff;
+}
+
+/* DONATION */
+
+#don {
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 10px;
+}
+#don div {
+  background-color: #fff;
+}
+
+.error {
+  font-size: 1.2vw;
+  display: block;
+  width: 90%;
+  padding: 5%;
+  margin: 0;
+}
+
+#don h2 {
+  background-color: #d63d41;
+  margin: 0;
+  padding: 15px;
+  color: #fff;
+}
+
+#don button {
+  background-color: #883032;
+  color: #fff;
+  height: 5vh;
+  border: 0;
+}
+
+#edux-donation {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+#edux-donation input {
+  float: left;
+  width: auto;
+  margin-right: 10px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.button1 {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: block;
+  width: 100px;
+  background-color: #883032;
+  color: #fff;
+  border: none;
+  padding: 5px;
+}
+
+.donButton {
+  background-color: #883032;
+  color: #fff;
+  height: 5vh;
+  border: 0;
+  width: 50%;
+  margin: auto;
+  display: block;
+  margin-bottom: 10px;
+}
+
+span {
+  padding: 10px;
+  display: inline-flex;
+}
+
+#d3 {
+  display: none;
+}
+
+#button {
+  background-color: #883032;
+  color: #fff;
+}
+
+#logout {
+  display: block;
+  margin: auto;
+  background-color: #883032;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border: 0;
+  color: #fff;
+  padding: 5px;
+}
+
+.ty {
+  display: block;
+  margin: auto;
+  font-size: 30px;
+  color: #fff;
+  background-color: #883032;
+  text-align: center;
+  padding: 20px;
 }
